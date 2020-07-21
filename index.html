@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+  <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/world.js"></script>
 <link rel="shortcut icon" href="https://imgkr.cn-bj.ufileos.com/186322a9-9f41-44ba-8638-8b94acda9d46.png">
 <meta ><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>DataMethods</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+<title>LiuDong</title><link href='https://fonts.loli.net/css?family=Open
+
++Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style 
+
+type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-
+
+text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", 
+
+Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; 
+
+line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-
+
+text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: 
+
+relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -44,14 +61,18 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-
+
+radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px !important; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-
+
+align: left; }
 table.md-table td { min-width: 32px; }
 .CodeMirror-gutters { border-right: 0px; background-color: inherit; }
 .CodeMirror-linenumber { user-select: none; }
@@ -64,8 +85,12 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-
+
+space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; 
+
+overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
@@ -73,7 +98,13 @@ div.hr:focus { cursor: none; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-
+
+decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; 
+
+cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; 
+
+box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -83,7 +114,9 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-
+
+ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
@@ -92,17 +125,23 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); 
+
+display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, 
+
+[contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 
+
+10px); border: none; }
 .math { font-size: 1rem; }
 .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
@@ -128,19 +167,43 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 
+
+255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb
+
+(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; 
+
+border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !
+
+important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial 
+
+!important; text-shadow: initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
 .html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-
+
+width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !
+
+important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !
+
+important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 
+
+0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; 
+
+white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 
+
+0px; border: 0px; padding: 0px; margin: 0px; }
 .MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !
+
+important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
@@ -160,7 +223,9 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Open
+
++Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 html {
     font-size: 16px;
@@ -525,31 +590,1021 @@ header, .context-menu, .megamenu-content, footer{
 
 
 <h1 id="">介绍</h1>
-<p>长期从事数据分析(Data analysis)和机器学习(Machine learning)方面的工作。个人主页整理一些数据分析的项目和方法，同时提供优质的学习资源，欢迎交流。</p>
+<p>长期从事数据分析(Data analysis)和机器学习(Machine learning)方面的工作。个人主页整理一些数据分析的项目和方法，同
+
+时提供优质的学习资源，欢迎交流。</p>
 <p><strong>邮件： 741080630@qq.com </strong></p>
-<table><tr><td bgcolor=lightgrey>近期要出Pandas速查工具，具体内容为Pandas各方法的使用技巧，由于Pandas官方文档许多方法展示不全面，因此整理这份资料，会附上demo供参考，预计一个月内发布。</td></tr></table>
+<table><tr><td bgcolor=lightgrey>近期要出Pandas速查工具，具体内容为Pandas各方法的使用技巧，由于Pandas官方文档许多方
+
+法展示不全面，因此整理这份资料，会附上demo供参考，预计一个月内发布。</td></tr></table>
 
 
 
-<h2 id="1">1.疫情数据抓取</h2>
+
+<h2 id="1"><a id="1"></a>1.疫情数据抓取</h2>
 <p>通过爬虫获取疫情的数据，最早可获取到1月份至今的数据。数据包括：</p>
 <ol>
 <li>当日数据</li>
 <li>历史数据(时间序列)<br></li>
 </ol>
 
-<p>数据地址：<a href="https://wp.m.163.com/163/page/news/virus_report/index.html" style="color:blue" >网易疫情播报平台</a><br>
-代码地址：<a href="https://github.com/SalientView/covid_19-data-crawler" style="color:blue" >基于网易疫情播报平台的数据采集</a></p>
+<p>数据地址：<a href="https://wp.m.163.com/163/page/news/virus_report/index.html" style="color:blue" >网易疫情播报
 
-基于疫情数据可以做地理可视化：
-<p><img src="https://imgkr.cn-bj.ufileos.com/930e0505-fd4c-41c1-9769-c72349df7978.png"  width="380" ></p>
+平台</a><br>
+代码地址：<a href="https://github.com/SalientView/covid_19-data-crawler" style="color:blue" >基于网易疫情播报平台的
 
+数据采集</a></p>
+
+
+<div id="f96212763b9742d68e935d7fa09e7a3c" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_f96212763b9742d68e935d7fa09e7a3c = echarts.init(
+            document.getElementById('f96212763b9742d68e935d7fa09e7a3c'), 'white', {renderer: 'canvas'});
+        var option_f96212763b9742d68e935d7fa09e7a3c = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u73b0\u5b58\u786e\u8bca\u4eba\u6570",
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "world",
+            "data": [
+                {
+                    "name": "Tunisia",
+                    "value": 56
+                },
+                {
+                    "name": "Serbia",
+                    "value": 367
+                },
+                {
+                    "name": "China",
+                    "value": 113
+                },
+                {
+                    "name": "Japan",
+                    "value": 1179
+                },
+                {
+                    "name": "Thailand",
+                    "value": 90
+                },
+                {
+                    "name": "Singapore",
+                    "value": 12612
+                },
+                {
+                    "name": "Korea",
+                    "value": 1015
+                },
+                {
+                    "name": "Australia",
+                    "value": 445
+                },
+                {
+                    "name": "Germany",
+                    "value": 7485
+                },
+                {
+                    "name": "United States",
+                    "value": 1142539
+                },
+                {
+                    "name": "Malaysia",
+                    "value": 1244
+                },
+                {
+                    "name": "Vietnam",
+                    "value": 16
+                },
+                {
+                    "name": "Saint Barthelemy",
+                    "value": 0
+                },
+                {
+                    "name": "Kenya",
+                    "value": 2028
+                },
+                {
+                    "name": "Iran",
+                    "value": 29045
+                },
+                {
+                    "name": "Israel",
+                    "value": 2722
+                },
+                {
+                    "name": "\u6bdb\u5229\u4e9a\u5c3c\u4e9a",
+                    "value": 8
+                },
+                {
+                    "name": "Lebanon",
+                    "value": 543
+                },
+                {
+                    "name": "Croatia",
+                    "value": 11
+                },
+                {
+                    "name": "Austria",
+                    "value": 432
+                },
+                {
+                    "name": "Switzerland",
+                    "value": 354
+                },
+                {
+                    "name": "Greece",
+                    "value": 1501
+                },
+                {
+                    "name": "Mauritius",
+                    "value": 3
+                },
+                {
+                    "name": "Estonia",
+                    "value": 194
+                },
+                {
+                    "name": "Macedonia",
+                    "value": 1424
+                },
+                {
+                    "name": "Belarus",
+                    "value": 25477
+                },
+                {
+                    "name": "Lithuania",
+                    "value": 317
+                },
+                {
+                    "name": "Azerbaijan",
+                    "value": 3487
+                },
+                {
+                    "name": "U.S. Virgin Islands",
+                    "value": 19
+                },
+                {
+                    "name": "Mongolia",
+                    "value": 109
+                },
+                {
+                    "name": "Ukraine",
+                    "value": 14634
+                },
+                {
+                    "name": "Poland",
+                    "value": 13181
+                },
+                {
+                    "name": "Bosnia and Herz.",
+                    "value": 533
+                },
+                {
+                    "name": "Montserrat",
+                    "value": 0
+                },
+                {
+                    "name": "South Africa",
+                    "value": 22823
+                },
+                {
+                    "name": "Burundi",
+                    "value": 37
+                },
+                {
+                    "name": "South Sudan",
+                    "value": 1570
+                },
+                {
+                    "name": "Malta",
+                    "value": 26
+                },
+                {
+                    "name": "Moldova",
+                    "value": 3863
+                },
+                {
+                    "name": "Bulgaria",
+                    "value": 1099
+                },
+                {
+                    "name": "Bangladesh",
+                    "value": 55363
+                },
+                {
+                    "name": "Albania",
+                    "value": 305
+                },
+                {
+                    "name": "State of Palestine",
+                    "value": 74
+                },
+                {
+                    "name": "Comoros",
+                    "value": 72
+                },
+                {
+                    "name": "Afghanistan",
+                    "value": 18460
+                },
+                {
+                    "name": "Saudi Arabia",
+                    "value": 31449
+                },
+                {
+                    "name": "New Zealand",
+                    "value": 0
+                },
+                {
+                    "name": "Tajikistan",
+                    "value": 1827
+                },
+                {
+                    "name": "Jersey",
+                    "value": 6
+                },
+                {
+                    "name": "Syria",
+                    "value": 78
+                },
+                {
+                    "name": "Panama",
+                    "value": 6269
+                },
+                {
+                    "name": "Cuba",
+                    "value": 242
+                },
+                {
+                    "name": "Nigeria",
+                    "value": 8893
+                },
+                {
+                    "name": "Morocco",
+                    "value": 734
+                },
+                {
+                    "name": "Senegal",
+                    "value": 1655
+                },
+                {
+                    "name": "Lao PDR",
+                    "value": 0
+                },
+                {
+                    "name": "Bahamas",
+                    "value": 28
+                },
+                {
+                    "name": "Mayotte",
+                    "value": 493
+                },
+                {
+                    "name": "Slovenia",
+                    "value": 18
+                },
+                {
+                    "name": "Luxembourg",
+                    "value": 34
+                },
+                {
+                    "name": "Ireland",
+                    "value": 826
+                },
+                {
+                    "name": "Ecuador",
+                    "value": 19207
+                },
+                {
+                    "name": "Czechia",
+                    "value": 2370
+                },
+                {
+                    "name": "Hungary",
+                    "value": 1143
+                },
+                {
+                    "name": "French Guiana",
+                    "value": 344
+                },
+                {
+                    "name": "Togo",
+                    "value": 228
+                },
+                {
+                    "name": "Costa Rica",
+                    "value": 647
+                },
+                {
+                    "name": "Brunei",
+                    "value": 1
+                },
+                {
+                    "name": "Faeroe Islands",
+                    "value": 0
+                },
+                {
+                    "name": "Martinique",
+                    "value": 90
+                },
+                {
+                    "name": "Netherlands",
+                    "value": 41878
+                },
+                {
+                    "name": "Brazil",
+                    "value": 377985
+                },
+                {
+                    "name": "Honduras",
+                    "value": 5448
+                },
+                {
+                    "name": "Uruguay",
+                    "value": 69
+                },
+                {
+                    "name": "Peru",
+                    "value": 108442
+                },
+                {
+                    "name": "Chile",
+                    "value": 44845
+                },
+                {
+                    "name": "Greenland",
+                    "value": 0
+                },
+                {
+                    "name": "Saint-Barth\u00e9lemy",
+                    "value": 0
+                },
+                {
+                    "name": "Maldives",
+                    "value": 924
+                },
+                {
+                    "name": "Venezuela",
+                    "value": 2122
+                },
+                {
+                    "name": "Mauritania",
+                    "value": 962
+                },
+                {
+                    "name": "Namibia",
+                    "value": 15
+                },
+                {
+                    "name": "R\u00e9union",
+                    "value": 33
+                },
+                {
+                    "name": "Puerto Rico",
+                    "value": 5043
+                },
+                {
+                    "name": "Ghana",
+                    "value": 6398
+                },
+                {
+                    "name": "Eq.Guinea",
+                    "value": 1094
+                },
+                {
+                    "name": "Guinea",
+                    "value": 1293
+                },
+                {
+                    "name": "Rwanda",
+                    "value": 161
+                },
+                {
+                    "name": "Grenada",
+                    "value": 1
+                },
+                {
+                    "name": "Swaziland",
+                    "value": 136
+                },
+                {
+                    "name": "Tanzania",
+                    "value": 305
+                },
+                {
+                    "name": "Benin",
+                    "value": 113
+                },
+                {
+                    "name": "Dem.Rep.Congo",
+                    "value": 3629
+                },
+                {
+                    "name": "Central African Rep.",
+                    "value": 1807
+                },
+                {
+                    "name": "Liberia",
+                    "value": 153
+                },
+                {
+                    "name": "Somalia",
+                    "value": 1842
+                },
+                {
+                    "name": "Sierra Leone",
+                    "value": 354
+                },
+                {
+                    "name": "Chad",
+                    "value": 67
+                },
+                {
+                    "name": "Zambia",
+                    "value": 278
+                },
+                {
+                    "name": "Barbados",
+                    "value": 4
+                },
+                {
+                    "name": "Mali",
+                    "value": 561
+                },
+                {
+                    "name": "Argentina",
+                    "value": 16476
+                },
+                {
+                    "name": "French Polynesia",
+                    "value": 0
+                },
+                {
+                    "name": "Bahrain",
+                    "value": 5096
+                },
+                {
+                    "name": "Mozambique",
+                    "value": 315
+                },
+                {
+                    "name": "Cameroon",
+                    "value": 3306
+                },
+                {
+                    "name": "Uganda",
+                    "value": 539
+                },
+                {
+                    "name": "Eritrea",
+                    "value": 0
+                },
+                {
+                    "name": "Congo",
+                    "value": 483
+                },
+                {
+                    "name": "Zimbabwe",
+                    "value": 264
+                },
+                {
+                    "name": "Denmark",
+                    "value": 559
+                },
+                {
+                    "name": "Aruba",
+                    "value": 0
+                },
+                {
+                    "name": "Fiji",
+                    "value": 0
+                },
+                {
+                    "name": "Belize",
+                    "value": 1
+                },
+                {
+                    "name": "Myanmar",
+                    "value": 81
+                },
+                {
+                    "name": "Cyprus",
+                    "value": 147
+                },
+                {
+                    "name": "Guam",
+                    "value": 32
+                },
+                {
+                    "name": "Kosovo",
+                    "value": 320
+                },
+                {
+                    "name": "\u5723\u76ae\u57c3\u5c14\u5c9b\u548c\u5bc6\u514b\u9686\u5c9b",
+                    "value": 0
+                },
+                {
+                    "name": "Kyrgyzstan",
+                    "value": 548
+                },
+                {
+                    "name": "Botswana",
+                    "value": 17
+                },
+                {
+                    "name": "Niger",
+                    "value": 38
+                },
+                {
+                    "name": "Suriname",
+                    "value": 126
+                },
+                {
+                    "name": "Cabo Verde",
+                    "value": 310
+                },
+                {
+                    "name": "El Salvador",
+                    "value": 1720
+                },
+                {
+                    "name": "Guyana",
+                    "value": 58
+                },
+                {
+                    "name": "Nicaragua",
+                    "value": 702
+                },
+                {
+                    "name": "Gambia",
+                    "value": 6
+                },
+                {
+                    "name": "East Timor",
+                    "value": 0
+                },
+                {
+                    "name": "Pakistan",
+                    "value": 71127
+                },
+                {
+                    "name": "Egypt",
+                    "value": 25737
+                },
+                {
+                    "name": "Kuwait",
+                    "value": 10705
+                },
+                {
+                    "name": "Slovakia",
+                    "value": 101
+                },
+                {
+                    "name": "Gibraltar",
+                    "value": 11
+                },
+                {
+                    "name": "Monaco",
+                    "value": 2
+                },
+                {
+                    "name": "Paraguay",
+                    "value": 573
+                },
+                {
+                    "name": "Netherlands Antilles",
+                    "value": 5
+                },
+                {
+                    "name": "Dominica",
+                    "value": 2
+                },
+                {
+                    "name": "Uzbekistan",
+                    "value": 1043
+                },
+                {
+                    "name": "Montenegro",
+                    "value": 0
+                },
+                {
+                    "name": "Guatemala",
+                    "value": 5912
+                },
+                {
+                    "name": "Gabon",
+                    "value": 2288
+                },
+                {
+                    "name": "Sudan",
+                    "value": 3911
+                },
+                {
+                    "name": "Libya",
+                    "value": 296
+                },
+                {
+                    "name": "Sint Maarten",
+                    "value": 1
+                },
+                {
+                    "name": "Turkey",
+                    "value": 22787
+                },
+                {
+                    "name": "Papua New Guinea",
+                    "value": 0
+                },
+                {
+                    "name": "\u591a\u7c73\u5c3c\u52a0\u5171\u548c\u56fd",
+                    "value": 7663
+                },
+                {
+                    "name": "Jordan",
+                    "value": 179
+                },
+                {
+                    "name": "Armenia",
+                    "value": 9007
+                },
+                {
+                    "name": "Saint Kitts & Nevis",
+                    "value": 0
+                },
+                {
+                    "name": "Guadeloupe",
+                    "value": 6
+                },
+                {
+                    "name": "Antigua and Barbuda",
+                    "value": 3
+                },
+                {
+                    "name": "Bolivia",
+                    "value": 11315
+                },
+                {
+                    "name": "Colombia",
+                    "value": 24172
+                },
+                {
+                    "name": "Saint Vincent and the Grenadines",
+                    "value": 11
+                },
+                {
+                    "name": "Saint Lucia",
+                    "value": 1
+                },
+                {
+                    "name": "France",
+                    "value": 53789
+                },
+                {
+                    "name": "United Arab Emirates",
+                    "value": 16881
+                },
+                {
+                    "name": "Canada",
+                    "value": 34150
+                },
+                {
+                    "name": "India",
+                    "value": 133632
+                },
+                {
+                    "name": "United Kingdom",
+                    "value": 248356
+                },
+                {
+                    "name": "Italy",
+                    "value": 32872
+                },
+                {
+                    "name": "Russia",
+                    "value": 234378
+                },
+                {
+                    "name": "Philippines",
+                    "value": 17239
+                },
+                {
+                    "name": "Finland",
+                    "value": 901
+                },
+                {
+                    "name": "Nepal",
+                    "value": 3487
+                },
+                {
+                    "name": "Portugal",
+                    "value": 12475
+                },
+                {
+                    "name": "Yemen",
+                    "value": 375
+                },
+                {
+                    "name": "Seychelles",
+                    "value": 0
+                },
+                {
+                    "name": "Spain",
+                    "value": 64703
+                },
+                {
+                    "name": "Sri Lanka",
+                    "value": 791
+                },
+                {
+                    "name": "Algeria",
+                    "value": 2707
+                },
+                {
+                    "name": "Cambodia",
+                    "value": 2
+                },
+                {
+                    "name": "Haiti",
+                    "value": 3460
+                },
+                {
+                    "name": "Sweden",
+                    "value": 36236
+                },
+                {
+                    "name": "\u7279\u91cc\u5c3c\u8fbe\u548c\u591a\u5df4\u54e5",
+                    "value": 0
+                },
+                {
+                    "name": "Djibouti",
+                    "value": 2158
+                },
+                {
+                    "name": "\u5723\u591a\u7f8e\u4e0e\u666e\u6797\u897f\u6bd4",
+                    "value": 464
+                },
+                {
+                    "name": "Burkina Faso",
+                    "value": 73
+                },
+                {
+                    "name": "Belgium",
+                    "value": 33494
+                },
+                {
+                    "name": "Iraq",
+                    "value": 8045
+                },
+                {
+                    "name": "Malawi",
+                    "value": 396
+                },
+                {
+                    "name": "Iceland",
+                    "value": 3
+                },
+                {
+                    "name": "Guinea-Bissau",
+                    "value": 1224
+                },
+                {
+                    "name": "Latvia",
+                    "value": 269
+                },
+                {
+                    "name": "Bhutan",
+                    "value": 42
+                },
+                {
+                    "name": "Norway",
+                    "value": 199
+                },
+                {
+                    "name": "Indonesia",
+                    "value": 19739
+                },
+                {
+                    "name": "Angola",
+                    "value": 54
+                },
+                {
+                    "name": "Cayman Islands",
+                    "value": 71
+                },
+                {
+                    "name": "Ethiopia",
+                    "value": 1925
+                },
+                {
+                    "name": "Holy See",
+                    "value": 0
+                },
+                {
+                    "name": "C?te d'Ivoire",
+                    "value": 1912
+                },
+                {
+                    "name": "Qatar",
+                    "value": 24248
+                },
+                {
+                    "name": "Lesotho",
+                    "value": 2
+                },
+                {
+                    "name": "Georgia",
+                    "value": 119
+                },
+                {
+                    "name": "Mexico",
+                    "value": 22019
+                },
+                {
+                    "name": "San Marino",
+                    "value": 163
+                },
+                {
+                    "name": "Kazakhstan",
+                    "value": 4998
+                },
+                {
+                    "name": "Andorra",
+                    "value": 44
+                },
+                {
+                    "name": "Jamaica",
+                    "value": 184
+                },
+                {
+                    "name": "Guernsey",
+                    "value": 1
+                },
+                {
+                    "name": "Romania",
+                    "value": 4494
+                },
+                {
+                    "name": "Oman",
+                    "value": 13963
+                },
+                {
+                    "name": "Liechtenstein",
+                    "value": 26
+                },
+                {
+                    "name": "Madagascar",
+                    "value": 855
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u73b0\u5b58\u786e\u8bca\u4eba\u6570"
+            ],
+            "selected": {
+                "\u73b0\u5b58\u786e\u8bca\u4eba\u6570": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "\u4e16\u754c\u5404\u56fd\u5bb6\u73b0\u5b58\u786e\u8bca\u4eba\u6570\u5730\u56fe",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": 100,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 10000,
+                "color": "#800000"
+            },
+            {
+                "min": 5000,
+                "max": 9999,
+                "color": "#B22222"
+            },
+            {
+                "min": 999,
+                "max": 4999,
+                "color": "#CD5C5C"
+            },
+            {
+                "min": 100,
+                "max": 999,
+                "color": "#BC8F8F"
+            },
+            {
+                "max": 99,
+                "color": "#FFE4E1"
+            }
+        ]
+    }
+};
+        chart_f96212763b9742d68e935d7fa09e7a3c.setOption(option_f96212763b9742d68e935d7fa09e7a3c);
+    </script>
 
 
 <h2 id="2">2.自动化数据分析脚本</h2>
 <ul>
-<li>机器可以代替人工作吗？答案是不能100%，但或许80%是可以的。在数据分析时有些方法是通用的，适用于所有数据，不需要每次在分析时重新写。<br></li>
-<li>因此在人分析前机器先把数据中的信息展现一遍，基于这个目的我先写了一个辅助分析工具，提升数据分析的效率，更快的获取数据结论。<br></li>
+<li>机器可以代替人工作吗？答案是不能100%，但或许80%是可以的。在数据分析时有些方法是通用的，适用于所有数据，不需要每
+
+次在分析时重新写。<br></li>
+<li>因此在人分析前机器先把数据中的信息展现一遍，基于这个目的我先写了一个辅助分析工具，提升数据分析的效率，更快的获
+
+取数据结论。<br></li>
 <li>最终的目的是全自动化的数据分析，目前只达到初级效果。<br></li>
 <li>项目地址：<a href="https://github.com/SalientView/Auto_analysis"  style="color:blue" >自动化数据分析</a></li>
 </ul>
@@ -559,16 +1614,24 @@ header, .context-menu, .megamenu-content, footer{
 <h2 id="3">3.数据可视化配色</h2>
 <p>还在为作图的配色发愁？<br>
 我整理示了python所有的自带调色板，这样可以很方便地查看每种配色的名称和效果.<br>
-具体请下载pdf文件《<a href="https://github.com/SalientView/palette/blob/master/palette_all.pdf"  style="color:blue" >palette_all</a>》</p>
+具体请下载pdf文件《<a href="https://github.com/SalientView/palette/blob/master/palette_all.pdf"  style="color:blue" 
+
+>palette_all</a>》</p>
 <p>Worried about the color scheme for your data-visualization?
 I have sorted out all the palette in Python, so that you can clearly see the name and effect of each color. 
-See more details by downloading the PDF《<a href="https://github.com/SalientView/palette/blob/master/palette_all.pdf"  style="color:blue" >palette_all</a>》.</p>
+See more details by downloading the PDF《<a 
+
+href="https://github.com/SalientView/palette/blob/master/palette_all.pdf"  style="color:blue" 
+
+>palette_all</a>》.</p>
 <img src="https://imgkr.cn-bj.ufileos.com/b66a52c5-90f8-4dd6-972c-a7295ff13b64.png"  width="65%" >
 
 
 
 <h2 id="4">4.地图可视化</h2>
-<p>基于Pyecharts的地图可视化，包括世界地图、中国地图等，参考代码请移步：<a href="https://github.com/SalientView/MapShow"  style="color:blue" >地图可视化</a></p>
+<p>基于Pyecharts的地图可视化，包括世界地图、中国地图等，参考代码请移步：<a 
+
+href="https://github.com/SalientView/MapShow"  style="color:blue" >地图可视化</a></p>
 
 
 
@@ -585,7 +1648,9 @@ See more details by downloading the PDF《<a href="https://github.com/SalientVie
 
 <h2 id="5">5.词云图&词频分析</h2>
 
-<p>以红楼梦为例的中文词云图展示&词频统计，其他文本数据也可适用，代码地址：<a href="https://github.com/SalientView/wordcloud"  style="color:blue" >词云图&词频分析</a>
+<p>以红楼梦为例的中文词云图展示&词频统计，其他文本数据也可适用，代码地址：<a 
+
+href="https://github.com/SalientView/wordcloud"  style="color:blue" >词云图&词频分析</a>
 
 
 </p>
@@ -594,14 +1659,16 @@ See more details by downloading the PDF《<a href="https://github.com/SalientVie
 
 
 <img src="https://imgkr.cn-bj.ufileos.com/f026799f-03e6-495a-9daa-231d3e393499.png"  width="90%" alt="" />
-<img src="https://salientview.github.io/word_freq.png"  width="90%" alt="" />
+<img src="https://salientview.github.io/word_freq.png"  width="100%" alt="" />
 
 
 
 
 <h2 id="6">6.用python下载YouTube视频、B站视频</h2>
 <p>不需要下载任何软件工具就可以下载YouTube视频，还支持国内视频网站例如B站等。</p>
-<p>查看代码请移步<a href="https://github.com/SalientView/YouTube_Download"  style="color:blue" >视频下载脚本</a>。</p>
+<p>查看代码请移步<a href="https://github.com/SalientView/YouTube_Download"  style="color:blue" >视频下载脚本</a>。
+
+</p>
 <p>效果如下：</p>
 <img src="https://imgkr.cn-bj.ufileos.com/1b196cd8-f753-4512-9e22-198d4df996cc.png" alt="" />
 <img src="https://imgkr.cn-bj.ufileos.com/1d35f8da-b759-4205-aa6a-cf4c9f87a6ad.png" alt="" />
@@ -615,27 +1682,55 @@ Linux懂的不多，才刚开始学习，以下是一些可以在线使用的工
 <td>地址</td>
 </tr>
 
-<tr><td>命令解释</td><td><a href="http://explainshell.com/"  style="color:blue" >http://explainshell.com/</a> </td></tr>
-<tr><td>通过RPG游戏练习VIM使用</td><td><a href="http://vim-adventures.com/"  style="color:blue" >http://vim-adventures.com/</a> </td></tr>
-<tr><td>练习软件快捷键</td><td><a href="http://shortcutfoo.com/"  style="color:blue" >http://shortcutfoo.com/</a> </td></tr>
-<tr><td>免费编程书籍</td><td><a href="https://github.com/geekwolf/free-books"  style="color:blue" >https://github.com/geekwolf/free-books</a> </td></tr>
-<tr><td>实时文本交互聊天</td><td><a href="http://collabedit.com/"  style="color:blue" >http://collabedit.com/</a> </td></tr>
-<tr><td>在线编写运行分享C++代码编辑器</td><td><a href="http://cpp.sh/"  style="color:blue" >http://cpp.sh/</a> </td></tr>
-<tr><td>浏览器运行虚拟机</td><td><a href="http://copy.sh/v24/"  style="color:blue" >http://copy.sh/v24/</a> </td></tr>
-<tr><td>命令或记录网站</td><td><a href="http://commandlinefu.com/"  style="color:blue" >http://commandlinefu.com/</a> </td></tr>
-<tr><td>Linux发行版的详细信息</td><td><a href="https://distrowatch.com/"  style="color:blue" >https://distrowatch.com/</a> </td></tr>
-<tr><td>在线查看命令帮助</td><td><a href="http://linuxmanpages.com/"  style="color:blue" >http://linuxmanpages.com/</a> </td></tr>
-<tr><td>适用Linux环境的软件搜索引擎</td><td><a href="http://awesomecow.com/"  style="color:blue" >http://awesomecow.com/</a> </td></tr>
-<tr><td>Linux好玩游戏合集</td><td><a href="http://penguspy.com/"  style="color:blue" >http://penguspy.com/</a> </td></tr>
-<tr><td>在线查看内核代码及不同版本的差异</td><td><a href="http://lxr.free-electrons.com/"  style="color:blue" >http://lxr.free-electrons.com/</a> </td></tr>
+<tr><td>命令解释</td><td><a href="http://explainshell.com/"  style="color:blue" >http://explainshell.com/</a> 
+
+</td></tr>
+<tr><td>通过RPG游戏练习VIM使用</td><td><a href="http://vim-adventures.com/"  style="color:blue" >http://vim-
+
+adventures.com/</a> </td></tr>
+<tr><td>练习软件快捷键</td><td><a href="http://shortcutfoo.com/"  style="color:blue" >http://shortcutfoo.com/</a> 
+
+</td></tr>
+<tr><td>免费编程书籍</td><td><a href="https://github.com/geekwolf/free-books"  style="color:blue" 
+
+>https://github.com/geekwolf/free-books</a> </td></tr>
+<tr><td>实时文本交互聊天</td><td><a href="http://collabedit.com/"  style="color:blue" >http://collabedit.com/</a> 
+
+</td></tr>
+<tr><td>在线编写运行分享C++代码编辑器</td><td><a href="http://cpp.sh/"  style="color:blue" >http://cpp.sh/</a> 
+
+</td></tr>
+<tr><td>浏览器运行虚拟机</td><td><a href="http://copy.sh/v24/"  style="color:blue" >http://copy.sh/v24/</a> 
+
+</td></tr>
+<tr><td>命令或记录网站</td><td><a href="http://commandlinefu.com/"  style="color:blue" 
+
+>http://commandlinefu.com/</a> </td></tr>
+<tr><td>Linux发行版的详细信息</td><td><a href="https://distrowatch.com/"  style="color:blue" 
+
+>https://distrowatch.com/</a> </td></tr>
+<tr><td>在线查看命令帮助</td><td><a href="http://linuxmanpages.com/"  style="color:blue" 
+
+>http://linuxmanpages.com/</a> </td></tr>
+<tr><td>适用Linux环境的软件搜索引擎</td><td><a href="http://awesomecow.com/"  style="color:blue" 
+
+>http://awesomecow.com/</a> </td></tr>
+<tr><td>Linux好玩游戏合集</td><td><a href="http://penguspy.com/"  style="color:blue" >http://penguspy.com/</a> 
+
+</td></tr>
+<tr><td>在线查看内核代码及不同版本的差异</td><td><a href="http://lxr.free-electrons.com/"  style="color:blue" 
+
+>http://lxr.free-electrons.com/</a> </td></tr>
 </table>
 
 
 
 
 
-<h2 id="8">8.SQL学习</h2>
-<p>本资源以MySQL为目标，因为MySQL方面的文章已经有前人整理的非常到位，直接拿来用即可，不需要自己在重新整理，学习资源如下：</p>
+<h2 id="8"><a id="SQL"></a>8.SQL学习</h2>
+<p>本资源以MySQL为目标，因为MySQL方面的文章已经有前人整理的非常到位，直接拿来用即可，不需要自己在重新整理，学习资源
+
+如下：</p>
 
 <table border="1"  border="1" style="border-collapse: collapse;">
 <tr>
@@ -645,39 +1740,66 @@ Linux懂的不多，才刚开始学习，以下是一些可以在线使用的工
 
 <tr>
 <td>配置环境</td>
-<td><a href="https://www.jianshu.com/p/edca5142391c"  style="color:blue" >https://www.jianshu.com/p/edca5142391c</a></td>
+<td><a href="https://www.jianshu.com/p/edca5142391c"  style="color:blue" 
+
+>https://www.jianshu.com/p/edca5142391c</a></td>
 </tr>
 
 
 <tr>
 <td>测试题</td>
-<td><a href="https://zhuanlan.zhihu.com/p/53302593" style="color:blue" >https://zhuanlan.zhihu.com/p/53302593</a></th>
+<td><a href="https://zhuanlan.zhihu.com/p/53302593" style="color:blue" 
+
+>https://zhuanlan.zhihu.com/p/53302593</a></th>
 </tr>
 
 <tr>
 <td>在线写SQL</td>
-<td><a href="https://sqlzoo.net/" style="color:blue" >https://sqlzoo.net/</a><br><a href="https://sqlbolt.com/" style="color:blue" >https://sqlbolt.com/</a><br><a href="http://xuesql.cn" style="color:blue" >http://xuesql.cn</a><br><a href="http://sqlfiddle.com/" style="color:blue" >http://sqlfiddle.com/</a><br><a href="https://leetcode-cn.com/" style="color:blue" >https://leetcode-cn.com/</a>
+<td><a href="https://sqlzoo.net/" style="color:blue" >https://sqlzoo.net/</a><br><a href="https://sqlbolt.com/" 
+
+style="color:blue" >https://sqlbolt.com/</a><br><a href="http://xuesql.cn" style="color:blue" 
+
+>http://xuesql.cn</a><br><a href="http://sqlfiddle.com/" style="color:blue" >http://sqlfiddle.com/</a><br><a 
+
+href="https://leetcode-cn.com/" style="color:blue" >https://leetcode-cn.com/</a>
 </td>
 </tr>
 
 <tr>
 <td>关于SQL语句的执行顺序</td>
 <td>
-<a href="https://zhuanlan.zhihu.com/p/48048479" style="color:blue" >https://zhuanlan.zhihu.com/p/48048479</a><br><a href="https://www.cnblogs.com/yyjie/p/7788428.html" style="color:blue" >https://www.cnblogs.com/yyjie/p/7788428.html</a><br><a href="https://zhuanlan.zhihu.com/p/63299573" style="color:blue" >https://zhuanlan.zhihu.com/p/63299573</a>
+<a href="https://zhuanlan.zhihu.com/p/48048479" style="color:blue" >https://zhuanlan.zhihu.com/p/48048479</a><br><a 
+
+href="https://www.cnblogs.com/yyjie/p/7788428.html" style="color:blue" 
+
+>https://www.cnblogs.com/yyjie/p/7788428.html</a><br><a href="https://zhuanlan.zhihu.com/p/63299573" 
+
+style="color:blue" >https://zhuanlan.zhihu.com/p/63299573</a>
 </td>
 </tr>
-	
+
+
+
 <tr>
 <td>Python连接MySQL数据库</td>
-<td><a href="https://github.com/SalientView/SQL-Learning" style="color:blue" >https://github.com/SalientView/SQL-Learning</a></th>
+<td><a href="https://github.com/SalientView/SQL-Learning" style="color:blue" >https://github.com/SalientView/SQL-
+
+Learning</a></th>
 </tr>
+
+
+	
 </table>
 
 
 
 
 <h2 id="9">9.北大课程资料整理</h2>
-<p>学习爱好者们搜集了许多大学的课程资料，具体请移步：<a href="https://github.com/SalientView/libpku" style="color:blue" >北大课程资料</a></p>
+<p>学习爱好者们搜集了许多大学的课程资料，具体请移步：<a href="https://github.com/SalientView/libpku" 
 
+style="color:blue" >北大课程资料</a></p>
+
+  
+  
     </div>
 </body>
